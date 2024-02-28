@@ -1,0 +1,81 @@
+
+.application-form {
+    position: relative;
+    padding-bottom: 4em;
+}
+
+.items input{
+    margin-right: -6em;
+    margin-left: 2.5em;
+}
+
+input#newID-chkbox {
+    padding: 0;
+    margin-right: -6.5em;
+    cursor: pointer;
+}
+
+.items-container {
+    display: grid;
+    justify-items: start;
+    text-align: center;
+}
+
+.next-btn {
+    position: absolute;
+    right: 15px;
+    bottom: 25px;
+}
+
+.items-container.replacement{
+    display: grid;
+    grid-template-columns: repeat(4, 220px);
+    justify-items:start;
+    justify-content: center;
+}
+
+.items{
+    margin-left: -2.5em;
+}
+
+.replacement .items{
+    margin-left: -7em;
+}
+
+.feedback-description {
+    margin: 2em;
+    margin-left: 3em;
+    font-weight: 600;
+}
+
+.feedback-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 2em;
+}
+
+.feedback-container textarea {
+    padding: 1em;
+    font-size: var(--sm-text);
+    border-radius: 5px;
+    color: var(--black);
+    cursor: pointer;
+}
+
+@media (max-width: 1325px) {
+    .items-container.replacement{
+        grid-template-columns: repeat(2, 1fr);
+        justify-items: start;
+    }
+}
+
+@media (max-width: 960px) {
+    .items-container.replacement{
+        grid-template-columns: 1fr;
+    }
+    .feedback-description{
+        margin-left: 2em;
+    }
+}
+    

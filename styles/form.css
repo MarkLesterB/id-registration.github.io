@@ -1,0 +1,120 @@
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100dvh;
+    background-image: url("../img/login-bg.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 0;
+    font-family:  var(--montserrat);   
+}
+/* Global Styles Ends */
+
+
+/* Login Form Styles */
+.container{
+    flex-direction: column;
+    text-align: center;
+    padding: 2em 3.5em;
+    background: var(--formBackground);
+    background-color: rgba(255, 255, 255, 0.6);
+    border-radius: 15px;
+    box-shadow: 5px 20px 50px #000;
+}
+
+.back-btn {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: var(--btnBackground);
+    padding: 0.8em;
+    border-bottom-left-radius: 0.8em;
+    border-top-right-radius: 0.8em;
+    color: var(--white);
+    font-size: var(--sm-text);
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.form--container--logo > img{
+     width: 80px;
+     height: 80px;
+}
+
+.form--container--header{
+    font-size: var(--xl-text);
+    font-weight: 900;
+    font-family: var(--roboto);
+    margin: 1em 0;
+}
+
+.form--container--content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+}
+
+.container--section--input{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 1em;
+    color: var(--white);
+}
+
+.container--section--input > label {
+    margin-right: 10px;
+}
+.invalid input {
+    border-color: #d93025;
+}
+
+.input-field .show-hide {
+    position: absolute;
+    right: 13px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 18px;
+    color: #919191;
+    cursor: pointer;
+    padding: 3px;
+}
+
+.field .error {
+    display: none;
+    align-items: center;
+    margin-top: 6px;
+    color: #d93025;
+    font-size: 13px;
+}
+
+.error .error-icon {
+    margin-right: 6px;
+    font-size: 15px;
+}
+
+/* Login Form Styles Ends */
+
+/* ID Animation */
+.form--container{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+.studentId-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-description {
+    display: flex;
+    margin-top: 2em;
+    font-size: var(--sm-text);
+    font-weight: 500;
+    max-width: 400px;
+}

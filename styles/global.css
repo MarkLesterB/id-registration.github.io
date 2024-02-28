@@ -1,0 +1,369 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Roboto:wght@300;400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+
+:root{
+    /* Colors */
+    --primary: #555454;
+    --formBackground: #FBF9F1;
+    --navbg: #f2eeee;
+    --white: #e4e4e4;
+    --black: #343434;
+    --red: #c80005;
+    --blue: #007bff;
+    --error-bg: #fde4e4;
+    --error-border: #fbc0c0;
+    --btnBackground: #9A031E;
+    --btnText: #fffffe;
+
+    /* Font Size */
+    --xs-text: 0.8rem;
+    --sm-text: 0.9rem;
+    --md-text: 1rem;
+    --lg-text: 1.5rem;
+    --xl-text: 2rem;
+
+    /* Font Family */
+    --roboto: "Roboto", sans-serif;
+    --montserrat: 'Montserrat', sans-serif;
+    --inter: 'Inter', sans-serif;
+    --serif-display: 'DM Serif Display', serif;
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+/* Navbar Style */
+.navbar {
+    display: flex;
+    text-align: center;
+    justify-content: end;
+    align-items: center;
+    width: 100%;
+    min-height: 120px;
+    background: var(--navbg);
+    box-shadow: 0px 4px 8px 0px rgba(0,0,0,0.26);
+    -webkit-box-shadow: 0px 4px 8px 0px rgba(0,0,0,0.26);
+    -moz-box-shadow: 0px 4px 8px 0px rgba(0,0,0,0.26);
+}
+
+.nav-menu {
+    padding: 10px;
+}
+
+.nav-items a {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: var(--primary);
+    cursor: pointer;
+    transition: color 0.2s;
+}
+
+.nav-items:hover {
+    color: var(--btnBackground);
+}
+
+.nav-items {
+    display: inline-block;
+    padding: 10px;
+    margin: 0 10px;
+}
+
+.nav-logo-content {
+    display: flex;
+    position: absolute;
+    left: 3em;
+    margin-right: 2em;
+    justify-content: end;
+    align-items: center;
+    text-align: start;
+    line-height: 1.5;
+}
+
+.nav-logo img {
+    width: 80px;
+    margin-right: 0.8em;
+}
+
+.nav-school-name {
+    font-weight: 800;
+}
+
+.nav-school-name span {
+    color: var(--btnBackground);
+    font-size: var(--md-text);
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bolder;
+    text-transform: uppercase;
+}
+
+/* Hamburger Menu Styles*/
+#sidebar {
+    width: 0;
+    height: 100%;
+    background-color: #fff;
+    position: fixed;
+    top: 0;
+    right: 0;
+    overflow-x: hidden;
+    transition: 0.5s;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    z-index: 12;
+  }
+
+  #sidebar img {
+    width: 50px;
+    position: relative;
+    margin-left: 15em;
+    padding: 15px;
+    text-decoration: none;
+    font-size: 18px;
+    color: #333;
+    display: block;
+    transition: 0.3s;
+  }
+
+  #sidebar li {
+    margin: 2em 0;
+    text-transform: uppercase;
+  }
+
+  #sidebar a:hover {
+    color: var(--btnBackground);
+  }
+
+  #open-btn {
+    display: none;
+    font-size: 20px;
+    cursor: pointer;
+    position: absolute;
+    right: 25px;
+    top: 40px;
+    z-index: 10;
+    font-size: var(--lg-text);
+    color: var(--btnBackground);
+  }
+
+  .content {
+    padding: 20px;
+    transition: margin-right 0.5s;
+    margin-right: 0;
+    z-index: 1;
+  }
+
+
+  /* Sign in Button Style */
+.signin-btn {
+    margin: 0 2em;
+}
+.signin-btn a {
+    color: var(--btnText);
+    font-size: var(--md-text);
+    font-weight: 600;
+    background-color: var(--btnBackground);
+}
+
+/* Sign Out Style */
+.sign-out-btn img {
+    display: none;
+    
+}
+
+/* Back Button Style */
+.application-title-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.application-title-container img{
+    width: 20px;
+    margin-right: 1em;
+    cursor: pointer;
+}
+
+/* Input Styles*/
+input{
+    width: 200px;
+    padding: 0.8em 1.5em;
+    border-radius: 6px;
+    font-size: var(--xs-text);
+    border: none;
+    outline: none;
+}
+
+/* Button Styles */
+.btn-form{
+    
+    margin-top: 2em;
+    background: var(--btnBackground);
+    border: none;
+    padding: 0.8em 3em;
+    border-radius: 10px;
+    color: var(--btnText);
+    font-size: 1rem;
+    cursor: pointer;
+    transition: .2s ease-in;
+}
+.btn-form:hover{
+    background: #BF3131;
+}
+.btn-form:focus{
+    background: #a12a2a;
+}
+
+.blue-btn {
+    background: var(--blue);
+}
+.blue-btn:hover {
+    background: #0062cc;
+}
+
+/* Error Prompt */
+.error-container {
+    display: none;
+    background: var(--error-bg);
+    margin-bottom: 2em;
+    padding: 1em 2em;
+    border-radius: 0.5em;
+    border: 1.5px solid var(--error-border);
+}
+
+.error-message {
+    color: var(--btnBackground);
+    font-size: var(--sm-text);
+    font-weight: bold;
+}
+
+.error-input {
+    font-weight: 500;
+    display: flex;
+    margin: 0.5em 0.5em;
+}
+
+/* Header */
+.application-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+    margin: 5em;
+    width: 80%;
+}
+
+.application-title {
+    font-size: var(--lg-text);
+    color: var(--black);
+    font-weight: 800;
+    font-family: var(--inter);
+}
+
+.application-form {
+    width: 100%;
+    height: auto;
+    font-family: var(--inter);
+    padding-bottom: 1em;
+    border-radius: 0.8em;
+    margin: 1em 0;
+
+    box-shadow: 3px 4px 9px -2px rgba(0,0,0,0.65);
+    -webkit-box-shadow: 3px 4px 9px -2px rgba(0,0,0,0.65);
+    -moz-box-shadow: 3px 4px 9px -2px rgba(0,0,0,0.65);
+}
+
+.application-header-content {
+    background: var(--btnBackground);
+    border-top-right-radius: 0.8em;
+    border-top-left-radius: 0.8em;
+    padding: 1.5em 3em;
+    line-height: 1.5em;
+    color: var(--white);
+
+    box-shadow: 1px 1px 5px 0px rgba(0,0,0,0.75);
+    -webkit-box-shadow: 1px 1px 5px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 1px 1px 5px 0px rgba(0,0,0,0.75);
+}
+
+.application-header {
+    font-weight: 800;
+    text-transform: uppercase;
+}
+.application-description{
+    margin-left: 0.8em;
+    margin-top: 0.5em;
+}
+
+.items-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-items: center;
+    align-items: center;
+    margin: 4em 0;
+    grid-gap: 1em
+}
+
+/* Responsive Styles */
+@media (max-width: 1120px) {
+    #sidebar a {
+        font-size: var(--md-text);
+    }
+    #sidebar li {
+        margin: 3em 0;
+    }
+    #open-btn {
+        display: block;
+    }
+    .nav-menu {
+        display: none;
+    }
+    .items-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  @media (max-width: 960px) {
+    .signin-btn {
+        display: none;
+      }
+    .sign-out-btn img {
+        display: block;
+        width: 20px;
+        margin-right: 2em;
+        cursor: pointer;
+    }
+    .nav-school-name{
+        font-size: 0.8rem;
+    }
+    .nav-school-name span, .input-box label b {
+        font-size: 0.8rem;
+        font-weight: 900;
+    }
+    .items-container {
+        grid-template-columns: 1fr;
+    }
+
+    .application-description{
+        text-align: start;
+    }
+  }
+
+  @media (max-width: 760px) {
+    .content {
+        margin-top: 85px;
+    }
+    .label-input-row{
+        flex-direction: column;
+    }
+  }
